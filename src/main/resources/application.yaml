@@ -1,0 +1,36 @@
+spring:
+  jpa:
+    properties:
+      hibernate:
+        ddl-auto: validate
+        dialect: org.hibernate.dialect.PostgreSQL95Dialect
+  datasource:
+    url: jdbc:postgresql://localhost:5432/diploma-db
+    username: postgres
+    password: 123
+
+security:
+  token:
+    secret: sdf548@!#df4884234723894!@#sddfg1r#@#@$sd84e61f63f@##s6d5f#@f@#f#@@5f45s6f3@
+    client-ip: Client ip
+    issuer: gmail.ru server
+    token-cannot-be-verified: Token can not be verified
+    token-prefix: 'Bearer '
+    audience: mail.ru client
+    expiration-time: 180_000_000
+    jwt-token-header: Jwt-Token
+
+email:
+  verification:
+    simple_mail_transfer_protocol: smtps
+    username: rent.ryoka@gmail.com
+    password: Rentryoka12345$
+    from_email: rent.ryoka@gmail.com
+    email_subject: Verification account
+    gmail_smtp_server: smtp.gmail.com
+    smtp_host: mail.smtp.host
+    smtp_auth: mail.smtp.auth
+    smtp_port: mail.smtp.port
+    default_port: 465
+    smtp_starttls_enable: mail.smtp.starttls.enable
+    smtp_starttls_required: mail.smtp.starttls.required
